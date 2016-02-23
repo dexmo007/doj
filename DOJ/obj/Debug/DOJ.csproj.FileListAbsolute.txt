@@ -8,3 +8,6 @@ c:\users\henrik\documents\visual studio 2015\Projects\DOJ\DOJ\obj\Debug\DOJ.exe
 c:\users\henrik\documents\visual studio 2015\Projects\DOJ\DOJ\obj\Debug\DOJ.pdb
 c:\users\henrik\documents\visual studio 2015\Projects\DOJ\DOJ\obj\Debug\DOJ.LoginScreen.resources
 c:\users\henrik\documents\visual studio 2015\Projects\DOJ\DOJ\obj\Debug\DOJ.MainApp.resources
+D:\git_projects\doj\DOJ\bin\Debug\DOJ.exe.config
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.exe
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.pdb
