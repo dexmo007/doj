@@ -1,0 +1,8 @@
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\bin\Debug\DojTest.dll
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\bin\Debug\DojTest.pdb
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\bin\Debug\DOJ.exe
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\bin\Debug\DOJ.pdb
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\obj\Debug\DojTest.csprojResolveAssemblyReference.cache
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\obj\Debug\DojTest.dll
+C:\Users\Henrik\Documents\Visual Studio 2015\Projects\DOJ\DojTest\obj\Debug\DojTest.pdb
