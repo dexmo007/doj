@@ -11,3 +11,10 @@ c:\users\henrik\documents\visual studio 2015\Projects\DOJ\DOJ\obj\Debug\DOJ.Main
 D:\git_projects\doj\DOJ\bin\Debug\DOJ.exe.config
 D:\git_projects\doj\DOJ\obj\Debug\DOJ.exe
 D:\git_projects\doj\DOJ\obj\Debug\DOJ.pdb
+D:\git_projects\doj\DOJ\bin\Debug\DOJ.exe
+D:\git_projects\doj\DOJ\bin\Debug\DOJ.pdb
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.csprojResolveAssemblyReference.cache
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.LoginScreen.resources
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.MainApp.resources
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.Properties.Resources.resources
+D:\git_projects\doj\DOJ\obj\Debug\DOJ.csproj.GenerateResource.Cache

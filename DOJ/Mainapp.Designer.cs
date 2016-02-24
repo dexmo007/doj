@@ -45,7 +45,7 @@
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.urlTextBox = new System.Windows.Forms.TextBox();
             this.adminTab = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.applyButton = new System.Windows.Forms.Button();
@@ -112,9 +112,9 @@
             this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl.Controls.Add(this.webTab);
             this.tabControl.Controls.Add(this.peopleTab);
             this.tabControl.Controls.Add(this.fileTab);
-            this.tabControl.Controls.Add(this.webTab);
             this.tabControl.Controls.Add(this.adminTab);
             this.tabControl.Location = new System.Drawing.Point(0, 39);
             this.tabControl.Name = "tabControl";
@@ -149,7 +149,7 @@
             this.webTab.Controls.Add(this.forwardButton);
             this.webTab.Controls.Add(this.backButton);
             this.webTab.Controls.Add(this.webBrowser1);
-            this.webTab.Controls.Add(this.textBox1);
+            this.webTab.Controls.Add(this.urlTextBox);
             this.webTab.Location = new System.Drawing.Point(4, 22);
             this.webTab.Name = "webTab";
             this.webTab.Padding = new System.Windows.Forms.Padding(3);
@@ -213,16 +213,18 @@
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             // 
-            // textBox1
+            // urlTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.urlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(131, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(820, 26);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.urlTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlTextBox.Location = new System.Drawing.Point(131, 9);
+            this.urlTextBox.Name = "urlTextBox";
+            this.urlTextBox.Size = new System.Drawing.Size(820, 26);
+            this.urlTextBox.TabIndex = 0;
+            this.urlTextBox.Click += new System.EventHandler(this.urlTextBox_Click);
+            this.urlTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.urlTextBox_KeyPress);
+            this.urlTextBox.Leave += new System.EventHandler(this.urlTextBox_Leave);
             // 
             // adminTab
             // 
@@ -276,6 +278,7 @@
             this.MinimizeBox = false;
             this.Name = "MainApp";
             this.Text = "U.S. Department Of Justice Database";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainApp_FormClosing);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -301,7 +304,7 @@
         private System.Windows.Forms.TabPage fileTab;
         private System.Windows.Forms.TabPage webTab;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox urlTextBox;
         private System.Windows.Forms.TabPage adminTab;
         private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.Button backButton;

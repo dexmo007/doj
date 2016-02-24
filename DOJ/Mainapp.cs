@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DOJ
@@ -12,6 +13,7 @@ namespace DOJ
         private BindingSource _bindSource;
         private bool _unsavedChange = false;
         private bool _logoutFlag;
+        private bool _wasFocused;
 
         private const string GoogleSearch = "http://www.google.com/search?hl=en&q=";
 
@@ -46,7 +48,7 @@ namespace DOJ
         }
 
         #region web search
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void urlTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)ConsoleKey.Enter)
             {
@@ -56,7 +58,7 @@ namespace DOJ
 
         private void goButton_Click(object sender, EventArgs e)
         {
-            var text = textBox1.Text.Trim();
+            var text = urlTextBox.Text.Trim();
             if (text == "")
             {
                 return;
@@ -73,6 +75,8 @@ namespace DOJ
         {
             backButton.Enabled = webBrowser1.CanGoBack;
             forwardButton.Enabled = webBrowser1.CanGoForward;
+            urlTextBox.Text = webBrowser1.Url.ToString();
+            webBrowser1.Select();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -88,6 +92,24 @@ namespace DOJ
         private void homeButton_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate("www.justice.gov");
+        }
+
+        private void urlTextBox_Click(object sender, EventArgs e)
+        {
+            urlTextBox.ForeColor = Color.Black;
+            urlTextBox.Font = new Font(urlTextBox.Font, FontStyle.Regular);
+            if (!_wasFocused)
+            {
+                _wasFocused = true;
+                urlTextBox.SelectAll();
+            }
+        }
+
+        private void urlTextBox_Leave(object sender, EventArgs e)
+        {
+            _wasFocused = false;
+            urlTextBox.ForeColor = Color.Gray;
+            urlTextBox.Font = new Font(urlTextBox.Font, FontStyle.Italic);
         }
 
         #endregion
